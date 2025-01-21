@@ -87,7 +87,6 @@ def compute_and_plot_chromagrams(directory_path, bins_per_octave=36, n_bins=252,
                 print(f"Error processing {filename}: {e}")
 
 
-# Directory containing WAV files
 directory_path = ['../Chords']
 for path in directory_path:
     compute_and_plot_chromagrams(path)

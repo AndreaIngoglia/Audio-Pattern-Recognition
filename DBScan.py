@@ -95,14 +95,7 @@ def cluster_with_dbscan(features, file_names, eps=0.2, min_samples=3):
     plt.show()
 
 
-# Define folder paths
 audio_folder = ["Samples_Drumset", "Chords"]
-
-# Extract features
 features, file_names = extract_features(audio_folder)
-
-# Normalize features
 normalized_features = normalize_features(features)
-
-# Perform clustering
 cluster_with_dbscan(normalized_features, file_names, eps=0.2, min_samples=3)

@@ -43,11 +43,9 @@ def save_spectrogram(audio_path, output_dir, img_size=(128, 128)):
         print(f"Error processing {audio_path}: {e}")
 
 
-# Directory containing WAV files
-input_dir = '../Chords'  # Adjust to your dataset path
-output_dir = '../Chord_Spectrograms'  # Directory to save spectrograms
+input_dir = '../Chords'
+output_dir = '../Chord_Spectrograms'
 
-# Process all audio files
 for filename in os.listdir(input_dir):
     if filename.endswith('.wav'):
         audio_path = os.path.join(input_dir, filename)

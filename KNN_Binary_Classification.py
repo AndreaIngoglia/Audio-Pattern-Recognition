@@ -76,11 +76,11 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.show()
 
-train_errors = 1 - cross_val_score(best_knn, X_train, y_train, cv=10, scoring='accuracy')  # Adjusted cv to 10
-test_errors = 1 - cross_val_score(best_knn, X_test, y_test, cv=10, scoring='accuracy')  # Adjusted cv to 10
+train_errors = 1 - cross_val_score(best_knn, X_train, y_train, cv=10, scoring='accuracy')  
+test_errors = 1 - cross_val_score(best_knn, X_test, y_test, cv=10, scoring='accuracy')
 
 plt.figure(figsize=(12, 6))
-plt.plot(range(1, 11), train_errors, label="Training Error", marker='o')  # Updated x-axis to range(1, 11)
+plt.plot(range(1, 11), train_errors, label="Training Error", marker='o')
 plt.plot(range(1, 11), test_errors, label="Test Error", marker='o')
 plt.xticks(range(1, 11))
 plt.xlabel("Fold")

@@ -25,7 +25,7 @@ def predict_fn(images):
     """
     Prediction function for LIME. Takes a list of images and returns class probabilities.
     """
-    images = np.array(images)  # Ensure input is a NumPy array
+    images = np.array(images) 
     images = images[..., 0:1]  # Convert RGB back to grayscale
     return model.predict(images)
 
@@ -37,7 +37,6 @@ image_paths = [
     "Spectrograms_Train_Test_CNN/Test/Gn_j/piano_2_Gn_j_f_01.png"
 ]
 
-# Process each image in the image_paths list
 for image_path in image_paths:
     # Preprocess the image
     image = preprocess_image(image_path).squeeze()  # Preprocess and remove batch dimension

@@ -94,9 +94,7 @@ def classify_with_hamming(binary_vectors_df, ground_truth_df):
     return accuracy, precision, recall, f1
 
 
-# Directory containing WAV files
 directory_path = 'Chords'
-
 # Compute binary vectors
 binary_vectors_df = compute_binary_vectors(directory_path)
 
@@ -120,6 +118,3 @@ classification_results = {
 
 print(binary_vectors_df.to_string())
 print(classification_results)
-
-# {'Accuracy': 0.8147453703703704, 'Precision': 0.9275056900573266, 'Recall': 0.8147453703703704, 'F1 Score': 0.7728730859582029}
-

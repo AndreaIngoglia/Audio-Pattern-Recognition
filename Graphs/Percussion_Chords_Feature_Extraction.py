@@ -98,13 +98,8 @@ def normalize_features(features):
     normalized_features = scaler.fit_transform(features)
     return normalized_features
 
-# Define folder paths
 audio_folder = ["../Samples_Drumset", "../Chords"]
-
-# Extract features
 features, file_names = extract_features(audio_folder)
-
-# Normalize features
 if features.size > 0:
     normalized_features = normalize_features(features)
     print("Normalized Features:")

@@ -57,22 +57,17 @@ def normalize_features(features):
     normalized_features = scaler.fit_transform(features)
     return normalized_features
 
-# Define folder paths
 audio_folder = ["Samples_Drumset", "Chords"]  # Replace with the actual paths
 
-# Extract features
 features, labels, file_names = extract_features(audio_folder)
 
-# Normalize features
 if features.size > 0:
     normalized_features = normalize_features(features)
 
-    # Create a DataFrame
     df = pd.DataFrame(normalized_features, columns=['Spectral Centroid', 'Zero-Crossing Rate', 'Spectral Flux'])
     df['Label'] = labels
     df['File Name'] = file_names
 
-    # Save to CSV
     output_path = "Audio_Features_Classification.csv"
     df.to_csv(output_path, sep=';', index=False)
     print(f"Features saved to {output_path}")
